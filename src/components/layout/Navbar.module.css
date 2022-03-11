@@ -1,0 +1,16 @@
+.list{
+    display:flex;
+    list-style: none;
+    
+    
+}
+.item{
+    margin-right: 1em;
+    
+    
+}
+.item :hover{
+    color:red;
+    text-decoration: none;
+    
+}

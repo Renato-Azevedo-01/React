@@ -1,10 +1,26 @@
 import styles from './Form.module.css'
 import InputForm from './InputForm.js'
+import Select from './Select.js'
+import SubmitButton from './SubmitButton.js'
 function Form() {
     return(
         <div>
         <form className={styles.formulario}>
-            <InputForm nome="projeto1" type="text" project="Nome do Projeto" id="projeto1" placeholder="Insira o nome do Projeto"  />
+            <InputForm 
+                type="text" 
+                text="Nome do projeto" 
+                name="name"  
+                placeholder="Insira o nome do Projeto"
+            />
+             <InputForm 
+                type="number" 
+                text="Orçamento do projeto" 
+                name="budget"  
+                placeholder="Insira o orçamento total"
+            />
+            <Select name="category_id" text="Selecione a categoria" />
+            <SubmitButton text="Criar projeto"/>
+
         </form>
         </div>
     )

@@ -23,6 +23,7 @@ function Form({handleSubmit, btnText , projectData}) {
 
     const submit = (e) => {
         e.preventDefault()
+        //console.log(project)
         handleSubmit(project)
     }
 
@@ -35,8 +36,8 @@ function Form({handleSubmit, btnText , projectData}) {
             ...project, 
             category: {
                 id: e.target.value,
-                name: e.target.options[e.target.selectedIndex].text,
-            },
+                name: e.target.options[e.target.selectedIndex].text
+            }
         })        
     }
    

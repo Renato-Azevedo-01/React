@@ -1,15 +1,48 @@
 {
   "projects": [
     {
-      "name": "Renato Azevedo Novo",
-      "budget": "10.000",
+      "name": "Projeto01",
+      "budget": "10000",
       "category": {
-        "id": "3",
-        "name": "Design"
+        "id": "1",
+        "name": "Infra"
       },
       "cost": 0,
       "services": [],
       "id": 1
+    },
+    {
+      "name": "Projeto02",
+      "budget": "22222",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "Projeto03",
+      "budget": "9999",
+      "category": {
+        "id": "2",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "Projeto04",
+      "budget": "20000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
     }
   ],
   "categories": [

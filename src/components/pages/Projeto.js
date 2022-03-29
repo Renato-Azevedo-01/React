@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom'
 import styles from './Projeto.module.css'
 import Loading from '../layout/Loading'
 import Form from '../layout/Form'
-import ServiceForm from '../layout/ServiceForm'
+import ServiceForm from '../layout/ServiceForm.js'
 import Container from '../layout/Container'
 import Message from '../layout/Message'
 

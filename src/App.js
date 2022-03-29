@@ -3,6 +3,7 @@ import Navbar from './components/layout/Navbar.js';
 import Footer from './components/layout/Footer.js';
 import Home from './components/pages/Home.js';
 import Projetos from './components/pages/Projetos.js';
+import Projeto from './components/pages/Projeto.js';
 import Novo_Projeto from './components/pages/NewProject.js';
 import Empresa from './components/pages/Empresa.js';
 import Contato from './components/pages/Contato.js';
@@ -14,11 +15,12 @@ function App() {
         <Navbar/>  
         <Container customClass="min_height">
         <Routes>          
-          <Route path="/" element= {<Home/>} />
+          <Route exact path="/" element= {<Home/>} />
           <Route path="/projetos" element= {<Projetos/>} />
           <Route path="/newproject" element= {<Novo_Projeto/>} />
           <Route path="/empresa" element= {<Empresa/>} />
-          <Route path="/contato" element= {<Contato/>} />          
+          <Route path="/contato" element= {<Contato/>} />
+          <Route path="/projeto/:id" element= {<Projeto/>} />          
         </Routes>
         </Container>
         <Footer />

@@ -6,21 +6,19 @@ import styles from './Projetos.module.css'
 import ProjectCard from '../layout/ProjectCard'
 import {useState, useEffect} from 'react'   
 import Loading from '../layout/Loading'
-import {useNavigate} from 'react-router-dom'
-
 
 function Projetos() {
-    const [projects, setProjects] = useState([])  
+    const [projetos, setProjetos] = useState([])  
     const [removeLoading, setRemoveLoading] = useState(false)
     const location = useLocation()
-    
+    const [projectMessage , setProjectMessage ] = useState('')
     let message = ''
     if (location.state) {
         message = location.state.message
     }   
 
     useEffect(() => {
-        setTimeout(() => {
+        setTimeout(() => {          //fictício ... só para mostrar a execução do loader 
             
             fetch('http://localhost:5000/projects' , {
                 method: "GET",
@@ -28,13 +26,25 @@ function Projetos() {
             })
             .then((resp) => resp.json())
             .then((data) => {console.log(data)
-                            setProjects(data)
+                            setProjetos(data)
                             setRemoveLoading(true)} ) //Acabou de carregar, o removeLoading vira true e some da tela 
             .catch((err) => console.log(err))
         }, 300)
     }, [] )
    
-
+    function removeProject(id) {
+        fetch(`http://localhost:5000/projects/${id}` , {
+            method: 'DELETE' ,
+            headers: {
+                'Component-Type' : 'application/json'
+            },
+        }).then(resp => resp.json())
+          .then(() => {
+              setProjetos(projetos.filter((project) => project.id !== id ))
+              setProjectMessage('Projeto removido com sucesso !')
+        })
+          .catch((err)=> console.log(err))
+    }
 
     return(
         <div className={styles.project_container}>
@@ -44,22 +54,23 @@ function Projetos() {
             </div>
 
             {message && <Message msg={message} type="success"/>}
+            {projectMessage && <Message msg={projectMessage} type="success"/>}
 
             <Container customClass="start">
-                {projects.length > 0
-                 && projects.map((project) => (
+                {projetos.length > 0
+                 && projetos.map((project) => (
                     <ProjectCard 
                         id={project.id}
                         name={project.name}
                         budget={project.budget}
                         category={project.category.name} 
                         key={project.id} 
+                        handleRemove={removeProject}
                     />))}
 
-                {!removeLoading && <Loading/>}
-                {removeLoading && projects.length === 0 && (                    
-                    navigate('/projetos', { state: {message: 'Não há projetos cadastrados !'} })
-                    
+                { !removeLoading && <Loading/>}
+                { removeLoading && projetos.length === 0 && (
+                    <p>Não há projetos cadastrados !</p>    
                 )}
             </Container>
             

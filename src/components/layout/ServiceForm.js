@@ -1,4 +1,3 @@
-import styles from '../layout/Form.module.css'
 function ServiceForm() {
     return(
         <form action="">
@@ -6,4 +5,4 @@ function ServiceForm() {
         </form>
     )
 }
-export default Service
+export default ServiceForm

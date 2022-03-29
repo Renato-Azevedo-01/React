@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom'
 import styles from './Projeto.module.css'
 import Loading from '../layout/Loading'
 import Form from '../layout/Form'
-import ServiceForm from '../service/ServiceForm.js'
+import ServiceForm from '../layout/ServiceForm'
 import Container from '../layout/Container'
 import Message from '../layout/Message'
 
@@ -95,7 +95,7 @@ function Projeto() {
                                 {!showServiceForm ? 'Adicionar serviço' : 'Fechar'}
                             </button>
                             <div className={styles.project_info}>
-                                {showServiceForm && (<ServiceForm />)}
+                                {showServiceForm && (<ServiceForm/>)}
                             </div>
                         </div>
                         <h2>Serviços</h2>

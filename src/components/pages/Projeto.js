@@ -6,6 +6,7 @@ import Form from '../layout/Form'
 import ServiceForm from '../layout/ServiceForm.js'
 import Container from '../layout/Container'
 import Message from '../layout/Message'
+import { parse, v4 as uuidv4 } from 'uuid'
 
 function Projeto() {
     const {id} = useParams()
@@ -26,6 +27,39 @@ function Projeto() {
         .then((data) => {setProjeto(data)})
         .catch((err) => console.log(err))
     },[id])
+
+    function createService(projeto) {
+        setMessage('')
+        //last service
+        const lastService = projeto.services[projeto.services.length -1]
+        
+        lastService.id = uuidv4()
+
+        const lastServiceCost = lastService.cost
+        
+        const newCost = parseFloat(projeto.cost) + parseFloat(lastServiceCost)
+
+        // maximun value validtion
+        if(newCost > parseFloat(projeto.budget)) {
+            setMessage('Orçamento ultrapassado ! Verifique o valor do serviço.')
+            setType('error')
+            projeto.services.pop()
+            return false
+        }
+
+        //add service cost to project total cost
+        projeto.cost = newCost
+
+        //update projeto
+        
+        fetch(`https://localhost:5000/project/${projeto.id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type' : 'application/json',
+            body: JSON.stringify(projeto)
+        }
+        })
+    }
+
 
     function toggleProjectForm() {
         {setShowProjectForm(!showProjectForm)}
@@ -95,7 +129,12 @@ function Projeto() {
                                 {!showServiceForm ? 'Adicionar serviço' : 'Fechar'}
                             </button>
                             <div className={styles.project_info}>
-                                {showServiceForm && (<ServiceForm/>)}
+                                {showServiceForm && (
+                                <ServiceForm
+                                  handleSubmit={createService}
+                                  btnText="Adicionar Serviço"
+                                  projectData ={projeto}                                 
+                                />)}
                             </div>
                         </div>
                         <h2>Serviços</h2>

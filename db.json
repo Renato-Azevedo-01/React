@@ -10,28 +10,6 @@
       "cost": 0,
       "services": [],
       "id": 3
-    },
-    {
-      "name": "Projeto04",
-      "budget": "50000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 4
-    },
-    {
-      "name": "Proj10",
-      "budget": "100001",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 5
     }
   ],
   "categories": [

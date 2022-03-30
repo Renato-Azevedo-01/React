@@ -2,14 +2,63 @@
   "projects": [
     {
       "name": "Projeto03a",
-      "budget": "40000",
+      "budget": "5000",
       "category": {
         "id": "3",
         "name": "Design"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 1100,
+      "services": [
+        {
+          "name": "s1",
+          "cost": "100",
+          "description": "ttt",
+          "id": "33704d6b-3951-4ef5-9275-74433607b743"
+        },
+        {
+          "name": "s3",
+          "cost": "1000",
+          "description": "atatatta",
+          "id": "92eb6b2c-1eeb-423f-9d1f-8e8b18c64411"
+        }
+      ],
       "id": 3
+    },
+    {
+      "name": "Projeto 2 ",
+      "budget": "20000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 1200,
+      "services": [
+        {
+          "name": "serv1",
+          "cost": "100",
+          "description": "aaa",
+          "id": "796d92db-a244-4429-9b1f-407f1a223476"
+        },
+        {
+          "name": "serv1",
+          "cost": "100",
+          "description": "aaa",
+          "id": "796d92db-a244-4429-9b1f-407f1a223476"
+        },
+        {
+          "name": "serv3",
+          "cost": "300",
+          "description": "dev php",
+          "id": "5bc71495-b192-48a4-9b48-46f9b7788a0a"
+        },
+        {
+          "name": "serv4",
+          "cost": "700",
+          "description": "Dev JS",
+          "id": "542db151-82f3-480c-a0c3-ee6cd7426e32"
+        }
+      ],
+      "id": 4
     }
   ],
   "categories": [

@@ -31,26 +31,8 @@
         "id": "3",
         "name": "Design"
       },
-      "cost": 1200,
+      "cost": 800,
       "services": [
-        {
-          "name": "serv1",
-          "cost": "100",
-          "description": "aaa",
-          "id": "796d92db-a244-4429-9b1f-407f1a223476"
-        },
-        {
-          "name": "serv1",
-          "cost": "100",
-          "description": "aaa",
-          "id": "796d92db-a244-4429-9b1f-407f1a223476"
-        },
-        {
-          "name": "serv3",
-          "cost": "300",
-          "description": "dev php",
-          "id": "5bc71495-b192-48a4-9b48-46f9b7788a0a"
-        },
         {
           "name": "serv4",
           "cost": "700",

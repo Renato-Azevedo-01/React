@@ -75,14 +75,14 @@ function Projeto() {
 
         fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
             method:'PATCH',
-            headers:{'Content-Text' : 'application/json'},
+            headers:{'Content-Type' : 'application/json'},
             body: JSON.stringify(projectUpdated)
         }).then((resp) => resp.json()) 
           .then((data) => {
             setProjeto(projectUpdated)
             setServices(servicesUpdated)
             setMessage('Serviço removido com sucesso !')
-            
+            setType('success')            
         })
         .catch((err) => console.log(err))
     }

@@ -1,46 +1,40 @@
 {
   "projects": [
     {
-      "name": "Projeto03a",
-      "budget": "5000",
+      "name": "Projeto01",
+      "budget": "11000",
       "category": {
-        "id": "3",
-        "name": "Design"
+        "id": "1",
+        "name": "Infra"
       },
-      "cost": 1100,
+      "cost": 2000,
       "services": [
         {
-          "name": "s1",
-          "cost": "100",
-          "description": "ttt",
-          "id": "33704d6b-3951-4ef5-9275-74433607b743"
-        },
-        {
-          "name": "s3",
-          "cost": "1000",
-          "description": "atatatta",
-          "id": "92eb6b2c-1eeb-423f-9d1f-8e8b18c64411"
+          "name": "Serv01",
+          "cost": "2000",
+          "description": "Contratar DEV",
+          "id": "98a1c84e-5db7-459c-8458-1469ac76883d"
         }
       ],
-      "id": 3
+      "id": 1
     },
     {
-      "name": "Projeto 2 ",
-      "budget": "20000",
+      "name": "Projeto02",
+      "budget": "15000",
       "category": {
-        "id": "3",
-        "name": "Design"
+        "id": "4",
+        "name": "Planejamento"
       },
-      "cost": 800,
+      "cost": 5000,
       "services": [
         {
-          "name": "serv4",
-          "cost": "700",
-          "description": "Dev JS",
-          "id": "542db151-82f3-480c-a0c3-ee6cd7426e32"
+          "name": "Serv01",
+          "cost": "5000",
+          "description": "Contratação faxineiro",
+          "id": "5bbfb097-d9ba-4453-858c-2919327f3cfa"
         }
       ],
-      "id": 4
+      "id": 2
     }
   ],
   "categories": [

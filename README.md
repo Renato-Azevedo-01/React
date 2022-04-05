@@ -23,5 +23,5 @@ Sugiro para quem está iniciando em React, fazer o curso de React básico do Mat
 3. react-router-dom
 4. uuid
 
-npm install json-server react-icons react-router-dom uuid					
+Basta digitar este comando no terminal: 					
 ![image](https://user-images.githubusercontent.com/97203729/161746735-ebdcc57c-f23a-465c-aea7-259aeac742ef.png)

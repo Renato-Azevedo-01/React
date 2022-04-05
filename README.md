@@ -15,3 +15,13 @@ Através de um curso de React, acompanhei a criação deste gerenciador de custo
 ### `Utilizei o VSCode`
 
 Sugiro para quem está iniciando em React, fazer o curso de React básico do Matheus Battisti do "Hora de Codar" - Muito fácil de acompanhar e tem a finalidade de apresentar a teoria básica e criar um projeto.
+
+### `Para este projeto, foi necessário instalar algumas dependências: `
+
+1. json-server
+2. react-icons
+3. react-router-dom
+4. uuid
+
+npm install json-server react-icons react-router-dom uuid					
+![image](https://user-images.githubusercontent.com/97203729/161746735-ebdcc57c-f23a-465c-aea7-259aeac742ef.png)
